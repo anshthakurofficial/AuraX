@@ -1,4 +1,3 @@
-/* --- Exact Full-Screen Gradient Layout --- */
 :root {
     --accent-blue: #38bdf8;
     --text-main: #ffffff;
@@ -12,7 +11,6 @@
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Full-screen smooth flowing gradient matching your photo */
 body {
     background: linear-gradient(135deg, #f97316 0%, #9333ea 50%, #06b6d4 100%);
     background-attachment: fixed;
@@ -21,7 +19,6 @@ body {
     min-height: 100vh;
 }
 
-/* Transparent Header floating directly over the gradient */
 header {
     background: transparent;
     display: flex;
@@ -55,7 +52,6 @@ header {
     text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-/* Navigation Links & Hamburger Menu */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -120,7 +116,6 @@ nav ul li a:hover, nav ul li a.active {
     }
 }
 
-/* Completely Boxless Content Container */
 .container {
     max-width: 900px;
     margin: 30px auto 80px auto;
@@ -151,7 +146,6 @@ nav ul li a:hover, nav ul li a.active {
     text-shadow: 0 1px 5px rgba(0,0,0,0.2);
 }
 
-/* Hero / Story Container Style matching your photo */
 .hero-story {
     padding: 20px 20px 60px 20px;
 }
@@ -196,7 +190,6 @@ nav ul li a:hover, nav ul li a.active {
     text-shadow: 0 1px 5px rgba(0,0,0,0.2);
 }
 
-/* Grids & Boxes (Transparent Clean Style) */
 .audience-grid, .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -224,7 +217,6 @@ nav ul li a:hover, nav ul li a.active {
     margin-bottom: 10px;
 }
 
-/* Forms & Inputs */
 .form-group {
     margin-bottom: 20px;
 }
@@ -253,7 +245,6 @@ nav ul li a:hover, nav ul li a.active {
     border-color: #38bdf8;
 }
 
-/* Buttons */
 .submit-btn, .cta-btn {
     background: #ffffff;
     color: #000000;
@@ -279,7 +270,6 @@ nav ul li a:hover, nav ul li a.active {
     color: #38bdf8;
 }
 
-/* Social Buttons */
 .social-links {
     display: flex;
     gap: 15px;
@@ -300,7 +290,6 @@ nav ul li a:hover, nav ul li a.active {
 .social-btn.youtube { background: #ef4444; }
 .social-btn.discord { background: #6366f1; }
 
-/* Footer */
 footer {
     background: transparent;
     color: #e2e8f0;
