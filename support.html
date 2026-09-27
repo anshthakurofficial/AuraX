@@ -19,7 +19,6 @@
 </head>
 <body>
 
-    <!-- Header & Navigation -->
     <header>
         <div class="logo-container">
             <img src="logo.jpg" alt="Aura-X Logo" class="brand-logo">
@@ -42,10 +41,8 @@
         </nav>
     </header>
 
-    <!-- Main Container -->
     <div class="container">
         
-        <!-- Functional Support Ticket Form with 1-Day Timeout -->
         <section class="card">
             <h2>Help Center & Support Desk</h2>
             <p>Need assistance or wish to report an issue? Submit your ticket below, and it will be delivered straight to our team at <strong style="color: #38bdf8;">anshthakurofficialji@gmail.com</strong>.</p>
@@ -62,7 +59,6 @@
                 <p style="font-size: 0.95rem; margin: 0;"><strong>Q: How often can I submit tickets?</strong><br>A: To prevent spam, you can submit one support ticket every 24 hours.</p>
             </div>
 
-            <!-- Formspree Endpoint Integration -->
             <form action="https://formspree.io/f/mdekwroo" method="POST" id="supportForm" onsubmit="handleFormSubmit(event)">
                 <div class="form-group">
                     <label for="username">Your Name:</label>
@@ -82,7 +78,6 @@
             <div id="successMessage" class="success-box" style="display: none; margin-top: 20px;"></div>
         </section>
 
-        <!-- Support Guide Information -->
         <section class="card">
             <h2>Official Support Guide: How Our Ticketing System Works</h2>
             <p style="color: #e2e8f0; font-size: 0.95rem; margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 15px;">Everything you need to know about getting help, reporting bugs, and communicating with the Aura-X support desk.</p>
@@ -107,33 +102,29 @@
             </div>
         </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Aura-X. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript Handling Menu, Formspree, and 1-Day Timeout Cooldown -->
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('show');
         }
 
-        // Check 1-day timeout when the page loads
         document.addEventListener("DOMContentLoaded", function() {
             const lastSubmissionTime = localStorage.getItem('auraX_last_ticket');
-            const oneDayInMillis = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+            const oneDayInMillis = 24 * 60 * 60 * 1000; 
 
             if (lastSubmissionTime) {
                 const timeElapsed = Date.now() - parseInt(lastSubmissionTime);
                 if (timeElapsed < oneDayInMillis) {
                     lockFormForCooldown();
                 } else {
-                    localStorage.removeItem('auraX_last_ticket'); // Cooldown expired, clear it
+                    localStorage.removeItem('auraX_last_ticket'); 
                 }
             }
 
-            // Scroll animations observer
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -147,18 +138,15 @@
             });
         });
 
-        // Handle Form Submission and Trigger Cooldown Timer
-        function handleFormSubmit(event) {
-            event.preventDefault(); // Pause standard form submission briefly to record timestamp
+       function handleFormSubmit(event) {
+            event.preventDefault(); 
 
             const form = document.getElementById('supportForm');
             const submitBtn = document.getElementById('submitBtn');
             const successBox = document.getElementById('successMessage');
 
-            // Save current timestamp to localStorage
             localStorage.setItem('auraX_last_ticket', Date.now().toString());
 
-            // Submit data programmatically to Formspree
             const formData = new FormData(form);
             fetch(form.action, {
                 method: 'POST',
@@ -178,7 +166,6 @@
             });
         }
 
-        // Lock form inputs and show cooldown notice
         function lockFormForCooldown() {
             const formInputs = document.querySelectorAll('#supportForm input, #supportForm textarea, #supportForm button');
             formInputs.forEach(element => {
