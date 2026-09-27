@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura-X | Updates & Roadmap</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .story-container > *, .card > *, .audience-box, .leader-profile, .roadmap-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .story-container > *.visible, .card > *.visible, .audience-box.visible, .leader-profile.visible, .roadmap-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Aura-X Logo" class="brand-logo">
+            <span class="logo-text">Aura-X</span>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="updates.html" class="active">Updates</a></li>
+                <li><a href="support.html">Help Center</a></li>
+                <li><a href="careers.html">Careers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="card">
+            <h2>Platform Updates & Strategic Roadmap</h2>
+            <p style="margin-bottom: 25px;">Welcome to the official Aura-X development ledger. Here, we track our evolution, detail current feature deployments, and outline the roadmap guiding our journey toward a fully realized, community-driven social ecosystem.</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                
+                <div class="roadmap-item" style="background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.2); border-left: 4px solid #38bdf8; padding: 25px; border-radius: 12px;">
+                    <span style="display: inline-block; background: rgba(56, 189, 248, 0.2); color: #38bdf8; font-size: 0.75rem; font-weight: 800; padding: 3px 10px; border-radius: 4px; margin-bottom: 8px; text-transform: uppercase;">Upcoming Milestone</span>
+                    <h3 style="color: #ffffff; margin-bottom: 5px;">Version 1.2 — Advanced Portals & Custom Themes</h3>
+                    <span style="font-size: 0.85rem; color: #38bdf8; display: block; margin-bottom: 10px; font-weight: 600;">Expected Release: Next Month</span>
+                    <p style="color: #e2e8f0; margin-bottom: 12px;">
+                        Our engineering and product teams are heavily focused on expanding user personalization options. Version 1.2 will introduce fully customizable profile layouts, dark/light aesthetic preference toggles, and refined notification systems designed to keep users seamlessly connected without digital fatigue.
+                    </p>
+                    <ul style="margin-left: 20px; color: #e2e8f0;">
+                        <li><strong style="color: #38bdf8;">Granular Theme Customization:</strong> Tailor your personal profile background accents and layout structures.</li>
+                        <li><strong style="color: #38bdf8;">Optimized Push Notification Engine:</strong> Faster, smarter alerts for community interactions, direct messages, and creator updates.</li>
+                        <li><strong style="color: #38bdf8;">Performance Enhancements:</strong> Upgraded caching protocols ensuring near-instantaneous page loads across mobile and desktop interfaces.</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-item" style="background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.2); border-left: 4px solid #10b981; padding: 25px; border-radius: 12px;">
+                    <span style="display: inline-block; background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.75rem; font-weight: 800; padding: 3px 10px; border-radius: 4px; margin-bottom: 8px; text-transform: uppercase;">Live Build</span>
+                    <h3 style="color: #ffffff; margin-bottom: 5px;">Version 1.1 — Ecosystem Integration & Support Infrastructure</h3>
+                    <span style="font-size: 0.85rem; color: #10b981; display: block; margin-bottom: 10px; font-weight: 600;">Released: Live Now</span>
+                    <p style="color: #e2e8f0; margin-bottom: 12px;">
+                        This major milestone marked the official public rollout of the Aura-X foundational web interface and mobile app interconnectivity. We successfully established our primary support ticketing architecture, secure tracking identifier generators, and direct social media bridges.
+                    </p>
+                    <ul style="margin-left: 20px; color: #e2e8f0;">
+                        <li><strong style="color: #38bdf8;">Interactive Support Ticketing:</strong> Automated ticket dispatching system equipped with unique tracking IDs (e.g., AURAX-9942) for streamlined user assistance.</li>
+                        <li><strong style="color: #38bdf8;">Mobile App Play Store Integration:</strong> Direct connection pathways linking users straight to our official Google Play Store application page.</li>
+                        <li><strong style="color: #38bdf8;">Responsive Multi-Page Navigation:</strong> Clean, high-performance architecture allowing smooth transitions between Home, About Us, Leadership, and Help Center sections.</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-item" style="background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.2); border-left: 4px solid #94a3b8; padding: 25px; border-radius: 12px;">
+                    <span style="display: inline-block; background: rgba(100, 116, 139, 0.2); color: #94a3b8; font-size: 0.75rem; font-weight: 800; padding: 3px 10px; border-radius: 4px; margin-bottom: 8px; text-transform: uppercase;">Foundation Milestone</span>
+                    <h3 style="color: #ffffff; margin-bottom: 5px;">Version 1.0 — Inception & Conceptualization</h3>
+                    <span style="font-size: 0.85rem; color: #94a3b8; display: block; margin-bottom: 10px; font-weight: 600;">Released: Phase One</span>
+                    <p style="color: #e2e8f0; margin-bottom: 12px;">
+                        The genesis of Aura-X. This phase established the conceptual framework, core philosophy, and initial brand identity. Grounded in the vision of creating a clutter-free, creator-friendly alternative to legacy social networks, Phase One laid the groundwork for our entire engineering blueprint.
+                    </p>
+                    <ul style="margin-left: 20px; color: #e2e8f0;">
+                        <li><strong style="color: #38bdf8;">Brand Architecture:</strong> Formalization of the Aura-X name, core mission, and vision statements.</li>
+                        <li><strong style="color: #38bdf8;">Core Philosophy Design:</strong> Structuring our foundational pillars focusing on user privacy, creator autonomy, and healthy community micro-spaces.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aura-X. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.story-container > *, .card > *, .audience-box, .leader-profile, .roadmap-item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura-X | Help Center & Support</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .story-container > *, .card > *, .audience-box, .leader-profile, .roadmap-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .story-container > *.visible, .card > *.visible, .audience-box.visible, .leader-profile.visible, .roadmap-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Aura-X Logo" class="brand-logo">
+            <span class="logo-text">Aura-X</span>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="updates.html">Updates</a></li>
+                <li><a href="support.html" class="active">Help Center</a></li>
+                <li><a href="careers.html">Careers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Functional Support Ticket Form with 1-Day Timeout -->
+        <section class="card">
+            <h2>Help Center & Support Desk</h2>
+            <p>Need assistance or wish to report an issue? Submit your ticket below, and it will be delivered straight to our team at <strong style="color: #38bdf8;">anshthakurofficialji@gmail.com</strong>.</p>
+            
+            <div style="margin: 20px 0;">
+                <div class="support-badge" style="background: rgba(0,0,0,0.25); border: 1px dashed #38bdf8; padding: 15px; border-radius: 10px;">
+                    <h4 style="color: #38bdf8; margin-bottom: 4px;">📞 Phone Support</h4>
+                    <p style="font-size: 0.85rem; color: #f472b6; margin: 0;">Coming Soon! Direct telephone lines will open in a future update.</p>
+                </div>
+            </div>
+
+            <div class="faq-box" style="background: rgba(0,0,0,0.25); border-left: 4px solid #38bdf8; padding: 15px; margin-bottom: 25px; border-radius: 0 10px 10px 0;">
+                <h4 style="color: #ffffff; margin-bottom: 5px;">Quick FAQ</h4>
+                <p style="font-size: 0.95rem; margin: 0;"><strong>Q: How often can I submit tickets?</strong><br>A: To prevent spam, you can submit one support ticket every 24 hours.</p>
+            </div>
+
+            <!-- Formspree Endpoint Integration -->
+            <form action="https://formspree.io/f/mdekwroo" method="POST" id="supportForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="username">Your Name:</label>
+                    <input type="text" id="username" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="useremail">Your Gmail Address:</label>
+                    <input type="email" id="useremail" name="email" required placeholder="e.g., yourname@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="issue">Describe Your Issue or Report:</label>
+                    <textarea id="issue" name="message" rows="4" required placeholder="Provide detail so our support team can assist you..."></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="submit-btn">Submit Support Ticket</button>
+            </form>
+
+            <div id="successMessage" class="success-box" style="display: none; margin-top: 20px;"></div>
+        </section>
+
+        <!-- Support Guide Information -->
+        <section class="card">
+            <h2>Official Support Guide: How Our Ticketing System Works</h2>
+            <p style="color: #e2e8f0; font-size: 0.95rem; margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 15px;">Everything you need to know about getting help, reporting bugs, and communicating with the Aura-X support desk.</p>
+            
+            <div>
+                <h3 style="color: #ffffff; margin-top: 20px; margin-bottom: 10px;">1. Introduction to Aura-X User Assistance</h3>
+                <p style="margin-bottom: 15px;">At Aura-X, we believe that a world-class social platform requires an equally world-class support infrastructure. Whether you are experiencing technical bugs, account questions, content moderation concerns, or general inquiries, our dedicated support team is here to ensure your experience remains smooth, secure, and uninterrupted.</p>
+
+                <h3 style="color: #ffffff; margin-top: 20px; margin-bottom: 10px;">2. Direct Contact & Official Email Desk</h3>
+                <p style="margin-bottom: 10px;">While our automated ticketing system above is the fastest way to route your issue to the correct department, you can also reach out to our administrative and escalation support desk directly via email at:</p>
+                <p style="margin-bottom: 15px;"><code style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); color: #38bdf8; padding: 4px 8px; border-radius: 6px; font-family: monospace;">anshthakurofficialji@gmail.com</code></p>
+
+                <h3 style="color: #ffffff; margin-top: 20px; margin-bottom: 10px;">3. What Happens After You Submit a Ticket?</h3>
+                <p style="margin-bottom: 10px;">When you fill out and dispatch our support form, the following process takes place automatically:</p>
+                <ul style="margin-left: 20px; margin-bottom: 15px; color: #e2e8f0;">
+                    <li style="margin-bottom: 5px;"><strong style="color: #38bdf8;">Instant Direct Routing:</strong> Your message is securely transmitted directly to our admin inbox.</li>
+                    <li style="margin-bottom: 5px;"><strong style="color: #38bdf8;">Gmail Delivery:</strong> Delivered straight to <em>anshthakurofficialji@gmail.com</em> for rapid review.</li>
+                    <li style="margin-bottom: 5px;"><strong style="color: #38bdf8;">24-Hour Cooldown:</strong> Protects our desk from spam by allowing one ticket per day per user device.</li>
+                </ul>
+
+                <p style="font-style: italic; color: #ffffff; background: rgba(0,0,0,0.25); border-left: 4px solid #38bdf8; padding: 15px; border-radius: 0 10px 10px 0; margin-top: 20px;">We are constantly improving our support frameworks to match the growth of our platform. Thank you for helping us make Aura-X a safer digital home for everyone.</p>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Aura-X. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Handling Menu, Formspree, and 1-Day Timeout Cooldown -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+
+        // Check 1-day timeout when the page loads
+        document.addEventListener("DOMContentLoaded", function() {
+            const lastSubmissionTime = localStorage.getItem('auraX_last_ticket');
+            const oneDayInMillis = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+
+            if (lastSubmissionTime) {
+                const timeElapsed = Date.now() - parseInt(lastSubmissionTime);
+                if (timeElapsed < oneDayInMillis) {
+                    lockFormForCooldown();
+                } else {
+                    localStorage.removeItem('auraX_last_ticket'); // Cooldown expired, clear it
+                }
+            }
+
+            // Scroll animations observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.story-container > *, .card > *, .audience-box, .leader-profile, .roadmap-item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Handle Form Submission and Trigger Cooldown Timer
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Pause standard form submission briefly to record timestamp
+
+            const form = document.getElementById('supportForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const successBox = document.getElementById('successMessage');
+
+            // Save current timestamp to localStorage
+            localStorage.setItem('auraX_last_ticket', Date.now().toString());
+
+            // Submit data programmatically to Formspree
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'json'
+                }
+            }).then(response => {
+                successBox.style.display = 'block';
+                successBox.innerHTML = `<h4>Ticket Dispatched Successfully!</h4>
+                                 <p>Your message has been sent successfully to <strong>anshthakurofficialji@gmail.com</strong>. For security, a <strong>1-day timeout</strong> is now active before you can submit another ticket.</p>`;
+                form.reset();
+                lockFormForCooldown();
+                successBox.scrollIntoView({ behavior: 'smooth' });
+            }).catch(error => {
+                alert('There was a problem submitting your ticket. Please try again.');
+            });
+        }
+
+        // Lock form inputs and show cooldown notice
+        function lockFormForCooldown() {
+            const formInputs = document.querySelectorAll('#supportForm input, #supportForm textarea, #supportForm button');
+            formInputs.forEach(element => {
+                element.disabled = true;
+                element.style.opacity = '0.6';
+                element.style.cursor = 'not-allowed';
+            });
+
+            const successBox = document.getElementById('successMessage');
+            successBox.style.display = 'block';
+            successBox.innerHTML = `<h4>Cooldown Active (1 Day Timeout)</h4>
+                             <p>You have already submitted a support ticket recently. To prevent spam, you can submit another ticket <strong>24 hours</strong> after your last submission.</p>`;
+        }
+    </script>
+</body>
+</html>

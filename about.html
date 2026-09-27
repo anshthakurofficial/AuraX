@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura-X | About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .story-container > *, .card > *, .audience-box, .leader-profile, .roadmap-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .story-container > *.visible, .card > *.visible, .audience-box.visible, .leader-profile.visible, .roadmap-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Aura-X Logo" class="brand-logo">
+            <span class="logo-text">Aura-X</span>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="updates.html">Updates</a></li>
+                <li><a href="support.html">Help Center</a></li>
+                <li><a href="careers.html">Careers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="card">
+            <h2>About Us — The Story Behind Aura-X</h2>
+            <p>Welcome to the core of <strong>Aura-X</strong>. To truly understand who we are, you have to look at why we started. In a digital era where billions of people are constantly connected online, genuine human connection often feels increasingly fragmented. Traditional social networks have evolved into crowded noise chambers driven purely by algorithms, advertisements, and superficial metrics. We realized that users, creators, and communities deserved something much better: a sanctuary built on authenticity, creativity, and purposeful engagement.</p>
+            
+            <p>Founded by visionaries who believe technology should elevate human potential rather than distract from it, Aura-X was engineered from the ground up to redefine how digital ecosystems operate. Our name embodies our core philosophy—<strong>"Aura"</strong> represents the unique energy, identity, and personal expression that every single user brings to the platform, while <strong>"X"</strong> signifies infinite possibilities, future-forward expansion, and the limitless boundaries of digital creativity.</p>
+
+            <h2 style="margin-top: 35px;">Our Core Philosophy & Pillars</h2>
+            <p>At Aura-X, our operational philosophy rests upon four unbreakable pillars that guide every feature we develop and every decision we make:</p>
+            
+            <ul style="list-style-type: disc; margin-left: 20px; margin-bottom: 20px; color: #f3f4f6;">
+                <li style="margin-bottom: 10px;"><strong style="color: #38bdf8;">Radical User Empowerment:</strong> We believe your digital space should truly belong to you. Users are given granular control over their privacy, content presentation, and interaction parameters.</li>
+                <li style="margin-bottom: 10px;"><strong style="color: #38bdf8;">Creator-Centric Growth:</strong> Independent creators are the heartbeat of modern culture. We provide cutting-edge monetization, distribution, and community-building frameworks designed to help talent thrive organically.</li>
+                <li style="margin-bottom: 10px;"><strong style="color: #38bdf8;">Meaningful Community Dynamics:</strong> Instead of mindless scrolling, Aura-X fosters deep interest-driven micro-communities where collaborative projects and shared passions can flourish.</li>
+                <li style="margin-bottom: 10px;"><strong style="color: #38bdf8;">Uncompromising Security & Trust:</strong> A safe digital environment is a non-negotiable standard. We utilize robust moderating architecture and modern security protocols to ensure every user feels protected and respected.</li>
+            </ul>
+
+            <h2 style="margin-top: 35px;">Looking Toward Tomorrow</h2>
+            <p>We view Aura-X not as a finished product, but as a living, breathing digital organism. As technology shifts and communication paradigms change, our engineering and product teams are continuously researching next-generation integration tools, immersive UI experiences, and smarter discovery pathways. We are committed to listening closely to our community feedback, iterating rapidly, and building a platform that scales seamlessly with the ambitions of its users.</p>
+            
+            <p>When you join Aura-X, you aren't just downloading another application or registering another profile—you are stepping into an expanding digital movement. You are claiming your space in a network designed to value your voice, amplify your creativity, and connect you with the world on your own terms. Welcome to the future of social networking.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aura-X. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.story-container > *, .card > *, .audience-box, .leader-profile, .roadmap-item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

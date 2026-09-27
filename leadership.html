@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura-X | Leadership</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .story-container > *, .card > *, .audience-box, .leader-profile, .roadmap-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .story-container > *.visible, .card > *.visible, .audience-box.visible, .leader-profile.visible, .roadmap-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Aura-X Logo" class="brand-logo">
+            <span class="logo-text">Aura-X</span>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="leadership.html" class="active">Leadership</a></li>
+                <li><a href="updates.html">Updates</a></li>
+                <li><a href="support.html">Help Center</a></li>
+                <li><a href="careers.html">Careers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="card">
+            <h2>Our Leadership Team</h2>
+            <p style="margin-bottom: 25px;">Meet the driving forces behind Aura-X. Discover the core visionaries shaping the platform's strategic direction, technical growth, and day-to-day operations.</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 25px;">
+                
+                <div class="leader-profile" style="background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.2); padding: 30px; border-radius: 12px;">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 4px;">Ujjwal Mehta</h3>
+                    <span class="role">Founder & Chief Executive Officer (CEO)</span>
+                    <p style="color: #f3f4f6; margin-bottom: 12px;">
+                        As the Founder and CEO of Aura-X, Ujjwal Mehta is the primary architect of the platform's overarching vision, culture, and long-term strategic trajectory. Recognizing the need for a more personalized, creative, and community-driven social ecosystem, he conceptualized Aura-X to bridge the gap between human connection and modern digital technology.
+                    </p>
+                    <p style="color: #ffffff; font-weight: 600; margin-bottom: 8px;">
+                        Key Responsibilities & Contributions:
+                    </p>
+                    <ul style="margin-left: 20px; color: #e2e8f0;">
+                        <li style="margin-bottom: 5px;"><strong style="color: #38bdf8;">Strategic Vision & Direction:</strong> Defining the core mission of Aura-X, ensuring every feature aligns with the goal of empowering creators, communities, and everyday users.</li>
+                        <li style="margin-bottom: 5px;"><strong style="color: #38bdf8;">Global Ecosystem Growth:</strong> Spearheading high-level growth initiatives, partnership opportunities, and expansion planning as the platform scales worldwide.</li>
+                        <li style="margin-bottom: 5px;"><strong style="color: #38bdf8;">Product Innovation:</strong> Working closely with product and development teams to guide new feature releases, user privacy standards, and next-generation social tools.</li>
+                    </ul>
+                </div>
+
+                <div class="leader-profile" style="background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.2); padding: 30px; border-radius: 12px;">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 4px;">Ansh Thakur</h3>
+                    <span class="role">General Project Manager</span>
+                    <p style="color: #f3f4f6; margin-bottom: 12px;">
+                        As the General Project Manager at Aura-X, Ansh Thakur serves as the operational backbone of the organization. He is responsible for translating the company's grand vision into actionable execution, managing project milestones, streamlining workflow efficiency, and ensuring that development timelines, technical deployments, and brand initiatives run seamlessly.
+                    </p>
+                    <p style="color: #ffffff; font-weight: 600; margin-bottom: 8px;">
+                        Key Responsibilities & Contributions:
+                    </p>
+                    <ul style="margin-left: 20px; color: #e2e8f0;">
+                        <li style="margin-bottom: 5px;"><strong style="color: #38bdf8;">Operations & Milestone Execution:</strong> Managing day-to-day project workflows, tracking platform development phases, and ensuring that every product release meets rigorous quality standards.</li>
+                        <li style="margin-bottom: 5px;"><strong style="color: #38bdf8;">Cross-Functional Coordination:</strong> Acting as the central bridge between design, development, and support frameworks to maintain unified momentum across all platform features.</li>
+                        <li style="margin-bottom: 5px;"><strong style="color: #38bdf8;">Platform Performance & Infrastructure:</strong> Overseeing technical maintenance, user feedback integration, and digital infrastructure optimization to guarantee a smooth experience for the entire Aura-X community.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aura-X. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.story-container > *, .card > *, .audience-box, .leader-profile, .roadmap-item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

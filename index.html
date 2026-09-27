@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura-X | Home</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Built-in Smooth Scroll Styling -->
+    <style>
+        .story-container > *, .card > *, .audience-box, .leader-profile, .roadmap-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .story-container > *.visible, .card > *.visible, .audience-box.visible, .leader-profile.visible, .roadmap-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Aura-X Logo" class="brand-logo">
+            <span class="logo-text">Aura-X</span>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="updates.html">Updates</a></li>
+                <li><a href="support.html">Help Center</a></li>
+                <li><a href="careers.html">Careers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-story">
+        <div class="story-container">
+            <h1>Welcome to Aura-X</h1>
+            <p class="tagline">A New Way to Connect, Create, Discover and Grow.</p>
+            
+            <p><strong>Aura-X</strong> is a next-generation social media platform created to bring people, creators, communities, and ideas together in one modern digital space.</p>
+            
+            <p>Social media is a huge part of everyday life. People use it to communicate with friends, share their experiences, discover new interests, follow creators, build communities, and express themselves. Aura-X is being built with this idea at its core: creating a platform where everyone can have their own space, discover content that matters to them, and connect with people around the world.</p>
+
+            <h2>What is Aura-X?</h2>
+            <p>Aura-X is more than just another social media application. It is a growing digital community designed around people, creativity, discovery, and connection.</p>
+            <p>Users will be able to create their own profiles, share photos and videos, publish posts, interact with other users, follow creators and communities, communicate through messaging, discover trending content, and personalize their social experience.</p>
+            <p>Whether you are someone who enjoys sharing everyday moments, a creator building an audience, a community looking for new members, or simply someone who wants to discover something new, Aura-X is designed to give you a place to belong.</p>
+
+            <h2>Built for Everyone</h2>
+            <p>Aura-X aims to create an experience that can adapt to different types of users.</p>
+            
+            <div class="audience-grid">
+                <div class="audience-box">
+                    <h3>For Everyday Users</h3>
+                    <p>Share your moments, follow people you enjoy, interact with posts, discover new content, and stay connected with your friends and communities.</p>
+                </div>
+                <div class="audience-box">
+                    <h3>For Creators</h3>
+                    <p>Build your profile, share your creativity, grow your audience, interact with followers, and develop your own digital identity.</p>
+                </div>
+                <div class="audience-box">
+                    <h3>For Communities</h3>
+                    <p>Create spaces around shared interests, connect with like-minded people, discuss topics, share content, and build active communities.</p>
+                </div>
+                <div class="audience-box">
+                    <h3>For Businesses</h3>
+                    <p>Build a digital presence, connect with customers, promote products or services, and communicate with your audience.</p>
+                </div>
+            </div>
+
+            <h2>A More Personalized Social Experience</h2>
+            <p>Everyone uses social media differently. That's why Aura-X is designed around personalization.</p>
+            <p>The platform aims to understand what users are interested in through their interactions and content preferences, helping them discover posts, creators, communities, and topics that are relevant to them.</p>
+            <p>The goal is not simply to show users more content, but to help them discover content they actually want to see.</p>
+
+            <h2>Create Without Limits</h2>
+            <p>Your profile is your space.</p>
+            <p>Share your ideas, photographs, videos, achievements, memories, opinions, creativity, and experiences. Aura-X is designed to give users multiple ways to express themselves and interact with the community.</p>
+            <p>From regular posts to short-form content and community discussions, Aura-X aims to provide tools for different styles of expression.</p>
+
+            <h2>Discover Something New</h2>
+            <p>The internet is full of amazing people, ideas, communities, and content.</p>
+            <p>Aura-X is being designed to make discovery easier through personalized recommendations, search, trending content, creator discovery, communities, and interest-based experiences.</p>
+            <p>You may come to Aura-X to connect with people you already know—but you can also discover something completely new.</p>
+
+            <h2>Your Privacy Matters</h2>
+            <p>A modern social platform should give users control over their digital experience.</p>
+            <p>Aura-X aims to provide privacy controls, account security, content reporting, moderation tools, customizable visibility settings, and other features designed to help create a safer and more comfortable environment.</p>
+            <p>Users should have greater control over their profiles, interactions, and the content they choose to engage with.</p>
+
+            <h2>Designed for the Future</h2>
+            <p>Technology and the way people communicate are constantly changing.</p>
+            <p>Aura-X is being developed with a long-term vision of becoming a flexible and innovative social platform that can continue evolving with its users.</p>
+            <p>New features, creator tools, communities, personalization systems, communication experiences, and other improvements can continue to be introduced as the platform grows.</p>
+
+            <h2>Our Mission</h2>
+            <p class="highlight-quote">"To create a social platform where people can connect with others, express themselves, discover new ideas, build communities, and grow together."</p>
+            <p>We want Aura-X to be a place where users don't simply consume content—they participate, create, communicate, and become part of something bigger.</p>
+
+            <h2>Our Vision</h2>
+            <p>We envision Aura-X as a global digital community where technology brings people closer together while giving individuals more opportunities to express their identity and creativity.</p>
+            <p>We want to build an environment where a new creator can find an audience, a community can find its members, a user can discover something they love, and people can make meaningful connections.</p>
+
+            <div class="cta-banner" style="margin-top: 35px; text-align: center;">
+                <h3>Connect. Create. Discover. Grow.</h3>
+                <p>This is the idea behind Aura-X.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.mrrock.aurax" target="_blank" class="cta-btn" style="margin-top: 15px;">Download App on Play Store</a>
+            </div>
+
+            <div class="beginning-section" style="margin-top: 35px; text-align: center;">
+                <h3>The Beginning of Aura-X</h3>
+                <p>Aura-X is more than a name. It represents the beginning of an idea: creating a social experience that feels modern, personal, creative, and community-driven.</p>
+                <p>The platform will continue to evolve as we learn from our users, improve the experience, introduce new technology, and build new ways for people to connect.</p>
+                <p class="final-tag" style="margin-top: 20px; color: #38bdf8;"><strong>This is Aura-X.</strong><br>Your people. Your interests. Your creativity. Your community.<br><em>Your Social World. Your Aura.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Aura-X. All rights reserved.</p>
+    </footer>
+
+    <!-- Script to trigger smooth scroll animations -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.story-container > *, .card > *, .audience-box, .leader-profile, .roadmap-item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
